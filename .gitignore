@@ -1,0 +1,8 @@
+# Fichiers locaux, pas mis en ligne
+lancer le portfolio.bat
+_*.html
+# Anciennes captures Vite & Gourmand (remplacées par les maquettes)
+projets/vg-*.jpg
+!projets/vg-maquette-accueil-pc.jpg
+!projets/vg-maquette-menus-mobile.jpg
+!projets/vg-maquette-detail-mobile.jpg
