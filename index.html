@@ -152,6 +152,10 @@
   .coord .valeur { font-size: clamp(1.05rem, 2vw, 1.45rem); font-weight: 500; overflow-wrap: anywhere; }
   .coord a.valeur { text-decoration: none; transition: opacity .2s; }
   .coord a.valeur:hover { opacity: .7; }
+  .reseaux { display: flex; gap: .8rem; margin-top: .4rem; }
+  .rond { width: 58px; height: 58px; border-radius: 50%; border: 2px solid #D7E2EA; color: #D7E2EA; display: grid; place-items: center; transition: background .25s, color .25s, transform .25s; }
+  .rond svg { width: 26px; height: 26px; }
+  .rond:hover, .rond:focus-visible { background: #D7E2EA; color: #0C0C0C; transform: translateY(-3px); outline: none; }
   .formulaire { display: grid; gap: 1rem; }
   .formulaire .duo { display: grid; gap: 1rem; }
   .formulaire label { display: grid; gap: .4rem; font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; }
@@ -327,8 +331,12 @@
     <p class="fade" data-i18n="contact_texte">Un projet de site ? Écrivez-moi, je vous réponds sous 48 h.</p>
     <div class="contact-grille">
       <div class="coord fade">
-        <div class="ligne"><span class="etiquette">Email</span><a class="valeur" href="mailto:zineb.chemali@outlook.fr">zineb.chemali@outlook.fr</a></div>
-        <div class="ligne"><span class="etiquette">GitHub</span><a class="valeur" href="https://github.com/Lakagoull" target="_blank" rel="noopener">github.com/Lakagoull</a></div>
+        <div class="ligne"><span class="etiquette" data-i18n="retrouver">Me retrouver</span>
+          <div class="reseaux">
+            <a class="rond" href="mailto:zineb.chemali@outlook.fr" aria-label="Email : zineb.chemali@outlook.fr" title="zineb.chemali@outlook.fr"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="rond" href="https://github.com/Lakagoull" target="_blank" rel="noopener" aria-label="GitHub : Lakagoull" title="github.com/Lakagoull"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+          </div>
+        </div>
         <div class="ligne"><span class="etiquette" data-i18n="lieu_etiquette">Basée à</span><span class="valeur">Paris</span></div>
         <div class="ligne"><span class="etiquette" data-i18n="dispo_etiquette">Disponibilité</span><span class="valeur" data-i18n="dispo">Partout dans le monde, à distance</span></div>
       </div>
@@ -382,7 +390,7 @@
       voir_site: "Voir le site", p2_cat: "Site vitrine · Client", p2_titre: "Projet client en cours", p2_desc: "Cuisines professionnelles clés en main. Maquette : un plan de cuisine qui se dessine au fil du défilement.",
       bientot: "Bientôt", p3_cat: "Votre projet ?", p3_titre: "La prochaine carte peut être la vôtre", p3_desc: "Un site vitrine, une boutique, une application : parlons-en.",
       contact_titre: "Contact", contact_texte: "Un projet de site ? Écrivez-moi, je vous réponds sous 48 h.", pied: "Développeuse web freelance",
-      lieu_etiquette: "Basée à", dispo_etiquette: "Disponibilité", dispo: "Partout dans le monde, à distance",
+      retrouver: "Me retrouver", lieu_etiquette: "Basée à", dispo_etiquette: "Disponibilité", dispo: "Partout dans le monde, à distance",
       f_nom: "Nom", f_nom_ph: "Votre nom", f_email: "Email", f_email_ph: "vous@exemple.fr", f_type: "Type de projet",
       f_t1: "Site vitrine", f_t2: "Boutique en ligne", f_t3: "Application web", f_t4: "Refonte d'un site", f_t5: "Autre",
       f_message: "Message", f_message_ph: "Parlez-moi de votre projet, de vos délais, de votre budget…", f_envoyer: "Envoyer",
@@ -405,7 +413,7 @@
       voir_site: "View site", p2_cat: "Showcase site · Client", p2_titre: "Client project in progress", p2_desc: "Turnkey professional kitchens. Mockup: a kitchen floor plan that draws itself as you scroll.",
       bientot: "Soon", p3_cat: "Your project?", p3_titre: "The next card could be yours", p3_desc: "A showcase site, a shop, an app: let's talk.",
       contact_titre: "Contact", contact_texte: "Got a website project? Write to me, I reply within 48 hours.", pied: "Freelance web developer",
-      lieu_etiquette: "Based in", dispo_etiquette: "Availability", dispo: "Worldwide, remotely",
+      retrouver: "Find me", lieu_etiquette: "Based in", dispo_etiquette: "Availability", dispo: "Worldwide, remotely",
       f_nom: "Name", f_nom_ph: "Your name", f_email: "Email", f_email_ph: "you@example.com", f_type: "Project type",
       f_t1: "Showcase website", f_t2: "Online shop", f_t3: "Web application", f_t4: "Website redesign", f_t5: "Other",
       f_message: "Message", f_message_ph: "Tell me about your project, your timeline, your budget…", f_envoyer: "Send",
